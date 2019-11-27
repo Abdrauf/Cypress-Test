@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Testing of SSR WEB", ()=>{
+describe("Testing of TRACK WITH US WEB", ()=>{
 
     it("Login Application", ()=>{
 
@@ -9,20 +9,15 @@ describe("Testing of SSR WEB", ()=>{
 
         cy.url().should("include","/account/login");
 
-        cy.get('#Email').type("rotimiriley@qa.team");
-        cy.get('#Password').type("oluwaseun2019");
+        cy.get('#Email').type("tom@qa.team");
+        cy.get('#Password').type("P@ssword1");
 
         cy.get(':nth-child(4) > button').click({force:true});
+        cy.get('body')
+        cy.get('.logo-img')
 
-        cy.get('[style="border-left:2px solid gold; margin:10px;"] > .card > h3.text-primary');
-
-        cy.get('#fieldReports > .subnav-item').click();
-
-        cy.get(':nth-child(1) > :nth-child(7) > #editReport').click();
-
-        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > .row > :nth-child(2) > div > .read-only');
-
-        cy.get('#processFormModal > .modal-dialog > .modal-content > .modal-footer > .btn-custom-red').click();
+        cy.get("//a[contains(@class,'subnav-item')][contains(text(),'Field Reports')]").click();
+        cy.get("//h4[@class='panel-title']");
 
     })
     
