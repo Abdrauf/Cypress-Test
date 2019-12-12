@@ -23,9 +23,10 @@ describe("Testing of TRACKWITHUS WEB", ()=>{
         cy.contains('TrackWithUs')
         cy.wait(500)
         cy.contains('Dashboard')
-        cy.wait(800)
+        cy.wait(2000)
         
-        cy.get('#user')
+        cy.get('#user').click()
+        cy.wait(5000)
         cy.get(':nth-child(4) > .text-danger').click({force:true});
 
 

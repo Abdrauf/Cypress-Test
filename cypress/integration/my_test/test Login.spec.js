@@ -12,7 +12,9 @@ describe("Testing of TRACKWITHUS WEB", ()=>{
         cy.get('#Email').type("tom@qa.team");
         cy.get('#Password').type("P@ssword1");
 
-        cy.get(':nth-child(4) > button').click({force:true}); 
+        cy.get('#loginForm > div:nth-child(4) > button').click(); 
+
+        cy.wait(5000)
 
         cy.get('img')
         cy.contains('TrackWithUs')
