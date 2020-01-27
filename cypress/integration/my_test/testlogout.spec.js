@@ -9,12 +9,12 @@ describe("Testing of TRACKWITHUS WEB", ()=>{
 
         cy.url().should("include","/account/login");
 
-        cy.get('#Email').type("tom@qa.team");
+        cy.get('#Email').type("test123@qa.team");
         cy.get('#Password').type("P@ssword1");
         cy.contains('Login')
         cy.get(':nth-child(4) > button').click({force:true}); 
 
-        cy.wait(1000)
+        cy.wait(5000)
 
         cy.get('img')
 
