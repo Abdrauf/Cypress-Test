@@ -1,6 +1,6 @@
 {
     "devDependencies": {
-        "cypress": "^3.6.1",
+        "cypress": "^4.0.1",
         "cypress-dark": "1.7.14",
         "cypress-multi-reporters": "1.2.3",
         "mocha": "^7.0.1",
