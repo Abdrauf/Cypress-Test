@@ -9,8 +9,8 @@ describe("Testing of TRACK WITH US WEB", ()=>{
 
         cy.url().should("include","/account/login");
 
-        cy.get('#Email').type("test@gmail.com");
-        cy.get('#Password').type("123456");
+        cy.get('#Email').type("blip@mailinator.com");
+        cy.get('#Password').type("P@ssword1");
 
         cy.get(':nth-child(4) > button').click({force:true});
         cy.get('body')
