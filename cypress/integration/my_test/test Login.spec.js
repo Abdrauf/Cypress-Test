@@ -12,7 +12,7 @@ describe("Testing of TRACKWITHUS WEB", ()=>{
         cy.get('#Email').type("blip@mailinator.com");
         cy.get('#Password').type("P@ssword1");
 
-        cy.get('#loginForm > div:nth-child(4) > button').click(); 
+        cy.get('#loginForm > div:nth-child(4) > button').click({force:true}); 
 
         cy.wait(7000)
 
