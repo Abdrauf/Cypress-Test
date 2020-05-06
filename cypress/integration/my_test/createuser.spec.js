@@ -6,7 +6,7 @@ describe("Testing of TRACKWITHUS WEB", ()=>{
         cy.visit("http://trackwithus.test.vggdev.com/");
         cy.url().should("include","/account/login");
 
-        cy.get('#Email').type('tom@qa.team');
+        cy.get('#Email').type('blip@mailinator.com');
         cy.get('#Password').type('P@ssword1');
 
         cy.get(':nth-child(4) > button').click({force:true}); 
@@ -18,28 +18,30 @@ describe("Testing of TRACKWITHUS WEB", ()=>{
         cy.contains('Manage Users')
         cy.get(':nth-child(2) > .sidenav-item').click({force:true});
 
+
         cy.wait(800)
         cy.contains('Add User')
         cy.get('#createUser').click({force:true})
         cy.wait(800)
-        cy.get('#FirstName').type('Cypress')
+        cy.get('#FirstName').type('QA')
         cy.wait(50)
-        cy.get('#LastName').type('Test')
-        cy.get('#Email').type('cypt@qa.team')
-        cy.get('#Password').type('123456')
-        cy.get('#ConfirmPassword').type('123456')
-        cy.get('#Mobile').type('09090912347')
-        cy.get('#selectedUserRoleName').click({force:true})
+        cy.get('#LastName').type('Training')
+        cy.get('#Email').type('cypt31@qa.team')
+        cy.get('#Password').type('P@ssword1')
+        cy.get('#ConfirmPassword').type('P@ssword1')
+        cy.get('#Mobile').type('08072741823')
+        cy.wait(5000)
+        cy.get('#selectedUserRoleName').select("GSV ME").should('have.value','59')
+       
         cy.wait(5000)
         cy.contains('Check All')
         cy.get('#checkAll').click({force:true})
         cy.wait(500)
 
-        cy.get('#SelectedState > option:nth-child(1)').click({force:true})
+        cy.get('#SelectedState').select('Adamawa State').should('have.value','3')
         cy.contains('Required Submissions Frequency')
-        cy.get('#required_submissions_frequency > option:nth-child(2)').click({force:true})
+        cy.get('#required_submissions_frequency').select('Monthly').should('have.value','3')
         cy.get('#submitForm').click({force:true})
-
         cy.contains('Existing Users')
 
         
