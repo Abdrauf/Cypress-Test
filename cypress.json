@@ -1,7 +1,7 @@
 {
   "video": true,
 
-
+  "testFiles": "**/*.feature",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "configFile": "reporterOptions.json"
