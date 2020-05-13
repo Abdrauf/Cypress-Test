@@ -1,0 +1,287 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-05-13T12:08:27.378Z",
+    "end": "2020-05-13T12:11:09.249Z",
+    "duration": 161871,
+    "testsRegistered": 10,
+    "passPercent": 10,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 8,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "c22fb405-ddd4-4649-9210-3dac903b4310",
+      "title": "",
+      "fullFile": "cypress\\integration\\TrackWithUs\\trackwithus.spec.js",
+      "file": "cypress\\integration\\TrackWithUs\\trackwithus.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+          "title": "Testing of TRACKWITHUS WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login to the Application",
+              "fullTitle": "Testing of TRACKWITHUS WEB Login to the Application",
+              "timedOut": null,
+              "duration": 44514,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(7000);\ncy.get('img');\ncy.contains('TrackWithUs');\ncy.contains('Dashboard');\ncy.wait(2000);\ncy.get('li.active > .text-primary').click();",
+              "err": {},
+              "uuid": "64a56f8b-5410-428b-84a4-ddd337a33fd4",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": " View Report Field Module",
+              "fullTitle": "Testing of TRACKWITHUS WEB  View Report Field Module",
+              "timedOut": null,
+              "duration": 64602,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Field Reports');\ncy.get('#fieldReports > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Existing Field Reports');\ncy.get(':nth-child(1) > :nth-child(7) > #editReport').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('View Report');\ncy.wait(5000);\ncy.contains('Close');\ncy.get('#processFormModal > .modal-dialog > .modal-content > .modal-footer > .btn-custom-red').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Existing Field Reports');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `:nth-child(1) > :nth-child(7) > #editReport`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `:nth-child(1) > :nth-child(7) > #editReport`, but never found it.\n    at ensureExistence (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:137673:32)\n    at Object.ensureElExistence (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:137691:12)\n    at ensureExistence (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:3651:14)",
+                "diff": null
+              },
+              "uuid": "6e888698-c012-46ca-8ddd-2f2992e88802",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Field Report",
+              "fullTitle": "Testing of TRACKWITHUS WEB Search Field Report",
+              "timedOut": null,
+              "duration": 50234,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\ncy.contains('Field Reports');\ncy.get('#fieldReports > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Existing Field Reports');\ncy.contains('Search');\ncy.get('.app-search > .form-control').type('National Home Grown School Feeding Programme');\ncy.wait(5000);\ncy.contains('Existing Field Reports');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://trackwithus.test.vggdev.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: ESOCKETTIMEDOUT\n    at ClientRequest.<anonymous> (C:\\Users\\Abdrauf.folorunsho\\AppData\\Local\\Cypress\\Cache\\4.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\@cypress\\request\\request.js:816:19)\n    at Object.onceWrapper (events.js:299:28)\n    at ClientRequest.emit (events.js:210:5)\n    at Socket.emitRequestTimeout (_http_client.js:690:9)\n    at Object.onceWrapper (events.js:299:28)\n    at Socket.emit (events.js:210:5)\n    at Socket._onTimeout (net.js:468:8)\n    at listOnTimeout (internal/timers.js:531:17)\n    at processTimers (internal/timers.js:475:7)\n\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Testing of TRACKWITHUS WEB`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://trackwithus.test.vggdev.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: ESOCKETTIMEDOUT\n    at ClientRequest.<anonymous> (C:\\Users\\Abdrauf.folorunsho\\AppData\\Local\\Cypress\\Cache\\4.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\@cypress\\request\\request.js:816:19)\n    at Object.onceWrapper (events.js:299:28)\n    at ClientRequest.emit (events.js:210:5)\n    at Socket.emitRequestTimeout (_http_client.js:690:9)\n    at Object.onceWrapper (events.js:299:28)\n    at Socket.emit (events.js:210:5)\n    at Socket._onTimeout (net.js:468:8)\n    at listOnTimeout (internal/timers.js:531:17)\n    at processTimers (internal/timers.js:475:7)\n\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Testing of TRACKWITHUS WEB`\n",
+                "diff": null
+              },
+              "uuid": "547b0cd6-f101-4601-959f-e2fdef681cfc",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "View Field Report Template",
+              "fullTitle": "Testing of TRACKWITHUS WEB View Field Report Template",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\ncy.contains('Field Report Template');\ncy.get('#fieldReportTemplates > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Existing Report Templates');\ncy.get('#cloneAuthoredForm22').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Field Report Template');\ncy.wait(5000);\ncy.contains('Save');\ncy.get('#saveFieldReport').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Existing Report Templates');",
+              "err": {},
+              "uuid": "453600f6-ca3a-41d4-9da6-3e446e00672d",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "View and Search Social Programs Admin",
+              "fullTitle": "Testing of TRACKWITHUS WEB View and Search Social Programs Admin",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Social Programs Admin');\ncy.get('#socialProgramsAdmin > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Manage Social Programmes');\ncy.contains('Manage Business Indicators');\ncy.contains('Add Social Programme');\ncy.get('#createProgramme').click({\n  force: true\n});\ncy.contains('Add Programme & Cluster Form');\ncy.wait(2000);\ncy.get('.programme-form-modal > .modal-dialog > .modal-content > .modal-footer > .btn-custom-red').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Add Social Programme');\ncy.wait(5000);\ncy.get('.app-search > .form-control').type('Test VGG').click();",
+              "err": {},
+              "uuid": "3f3df1aa-7100-4b6b-b8de-45fbfc175988",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "View Issues Management",
+              "fullTitle": "Testing of TRACKWITHUS WEB View Issues Management",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Issue Management');\ncy.get('#issuesManagement > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Reported Issues');\ncy.get(':nth-child(1) > .subnav-item').click();",
+              "err": {},
+              "uuid": "93fb5c85-077d-4a88-a910-0f5ba8378b60",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "View People Performance And Search",
+              "fullTitle": "Testing of TRACKWITHUS WEB View People Performance And Search",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('People Performance');\ncy.get('#peoplePerformance > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Performance Analysis');\ncy.get('.app-search > .form-control').type(\"NSIP-MONITOR-1603\");\ncy.contains('Showing 1 to 1 of 1 entries');",
+              "err": {},
+              "uuid": "7e1687d4-dc0e-44d7-ba9c-23ff926bddd9",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filter Report Comparison",
+              "fullTitle": "Testing of TRACKWITHUS WEB Filter Report Comparison",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\ncy.get('img');\ncy.wait(2000);\ncy.contains('TrackWithUs');\ncy.contains('Dashboard');\ncy.contains('Report Comparison');\ncy.get('#reportComparison > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Report Comparison Data');\ncy.get('#filterGrid').click();\ncy.get('#program').select('National Home Grown School Feeding Programme').should('have.value', '4');\ncy.get('#selected_month').select('March').should('have.value', '3');\ncy.get('#selected_year').select('2020');\ncy.get('#filterForm').click();\ncy.wait(6000);\ncy.contains('Report Comparison Data');\ncy.contains('Showing 1 to 1 of 1 entries');",
+              "err": {},
+              "uuid": "d50a0caa-dede-499b-8b53-d59d6b6a0676",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Edit User role",
+              "fullTitle": "Testing of TRACKWITHUS WEB Edit User role",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Admin');\ncy.get('#userAdmin > .subnav-item').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Manage User Roles');\ncy.contains('Manage Users');\ncy.contains('Manage Devices');\ncy.wait(1000);\ncy.contains('Existing Roles');\ncy.get(':nth-child(1) > :nth-child(4) > #editRole').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Close');\ncy.get('.container-fluid > .modal > .modal-dialog > .modal-content > .modal-footer > .btn-custom-red').click({\n  force: true\n});\ncy.contains('Existing Role');\ncy.wait(1000);\ncy.contains('Role Name');\ncy.get(':nth-child(1) > :nth-child(4) > #editRole').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Close');\ncy.get('.container-fluid > .modal > .modal-dialog > .modal-content > .modal-footer > .btn-custom-red').click({\n  force: true\n});\ncy.contains('Existing Role');",
+              "err": {},
+              "uuid": "dc76f6b6-3cbb-45cf-ab11-f19894df6d50",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Edit A user",
+              "fullTitle": "Testing of TRACKWITHUS WEB Edit A user",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Admin');\ncy.get('#userAdmin > .subnav-item').click({\n  force: true\n});\ncy.wait(1000);\ncy.contains('Manage Users');\ncy.get('#sidenavManageUser > .sidenav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Full Name');\ncy.get(':nth-child(1) > :nth-child(7) > #editUser').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('#MiddleName').clear().type('Gof');\ncy.wait(1000); // cy.get('#MiddleName').type('Parrot')\ncy.wait(2000);\ncy.get('#submitForm').click({\n  force: true\n});\ncy.contains('Submit');\ncy.wait(5000);\ncy.contains('Add User');\ncy.wait(2000);\ncy.get('#user').click();\ncy.wait(5000);\ncy.get(':nth-child(4) > .text-danger').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "cc0c622d-c05f-45e2-a480-14220691e878",
+              "parentUUID": "b47b7ac4-61e6-4ebe-b970-9b5517a54192",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "64a56f8b-5410-428b-84a4-ddd337a33fd4"
+          ],
+          "failures": [
+            "6e888698-c012-46ca-8ddd-2f2992e88802",
+            "547b0cd6-f101-4601-959f-e2fdef681cfc"
+          ],
+          "pending": [],
+          "skipped": [
+            "453600f6-ca3a-41d4-9da6-3e446e00672d",
+            "3f3df1aa-7100-4b6b-b8de-45fbfc175988",
+            "93fb5c85-077d-4a88-a910-0f5ba8378b60",
+            "7e1687d4-dc0e-44d7-ba9c-23ff926bddd9",
+            "d50a0caa-dede-499b-8b53-d59d6b6a0676",
+            "dc76f6b6-3cbb-45cf-ab11-f19894df6d50",
+            "cc0c622d-c05f-45e2-a480-14220691e878"
+          ],
+          "duration": 159350,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

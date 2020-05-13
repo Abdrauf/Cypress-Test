@@ -51,6 +51,7 @@ describe("Testing of TRACKWITHUS WEB", ()=>{
         cy.wait(5000)
         cy.contains('Existing Field Reports')
 
+        cy.wait(4000)
         cy.get(':nth-child(1) > :nth-child(7) > #editReport').click({force:true})
         cy.wait(5000)
 

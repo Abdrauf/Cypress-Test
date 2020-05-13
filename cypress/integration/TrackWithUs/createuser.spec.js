@@ -7,7 +7,7 @@ describe("Testing of TRACKWITHUS WEB", ()=>{
         cy.url().should("include","/account/login");
 
         cy.get('#Email').type('blip@mailinator.com');
-        cy.get('#Password').type('P@ssword1');
+        cy.get('#Password').type('P@ssword21');
 
         cy.get(':nth-child(4) > button').click({force:true}); 
         cy.wait(9000)

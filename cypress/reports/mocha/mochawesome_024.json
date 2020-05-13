@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-05-13T11:56:00.279Z",
+    "end": "2020-05-13T11:56:44.239Z",
+    "duration": 43960,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ce00d8e6-aff6-417d-a4fc-05b972032ae0",
+      "title": "",
+      "fullFile": "cypress\\integration\\cbrtest\\loginlogout.spec.js",
+      "file": "cypress\\integration\\cbrtest\\loginlogout.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1ced5073-c1e0-4ffd-8c81-c7b72eb18f68",
+          "title": "Testing CBR Web",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Application",
+              "fullTitle": "Testing CBR Web Login Application",
+              "timedOut": null,
+              "duration": 38217,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://cbr.test.vggdev.com\");\ncy.get('#exampleInputEmail').type(\"marky@mailinator.com\");\ncy.get('#exampleInputPassword').type(\"P@ssword21\");\ncy.get('#loginButton').click();\ncy.wait(9000);\ncy.url().should(\"include\", \"/home/dashboard\");\ncy.wait(3000);\ncy.contains('Dashboard');\ncy.contains('National Beneficiaries');\ncy.get('.navbar-collapse > .navbar-nav > .nav-item > .nav-link');\ncy.contains('Marky Tacky');\ncy.wait(5000); //User then Log Out\ncy.get('.navbar-collapse > .navbar-nav > .nav-item > .nav-link').click();\ncy.wait(1000);\ncy.contains('Logout');\ncy.get('.dropdown-user > :nth-child(5) > a').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Forgot Password');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'https://cbr.test.vggdev.com/' to include '/home/dashboard'",
+                "estack": "AssertionError: Timed out retrying: expected 'https://cbr.test.vggdev.com/' to include '/home/dashboard'\n    at applyChainer (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:131898:32)\n    at https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:131940:16\n    at arrayReduce (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:18578:21)\n    at Function.reduce (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:27576:14)\n    at applyChainers (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:131929:22)\n    at tryCatcher (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:9065:23)\n    at Function.Promise.attempt.Promise.try (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:6339:29)\n    at Context.shouldFn (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:131946:26)\n    at Context.should (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:131964:23)\n    at https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:127819:39\n    at assertions (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:128079:14)\n    at tryCatcher (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:9065:23)\n    at Object.gotValue (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:8209:18)\n    at Object.gotAccum (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:8196:25)\n    at Object.tryCatcher (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (https://cbr.test.vggdev.com/__cypress/runner/cypress_runner.js:7000:31)",
+                "diff": null
+              },
+              "uuid": "efcffa40-cbd8-47aa-be79-06d31ef0f2b6",
+              "parentUUID": "1ced5073-c1e0-4ffd-8c81-c7b72eb18f68",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "efcffa40-cbd8-47aa-be79-06d31ef0f2b6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 38217,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

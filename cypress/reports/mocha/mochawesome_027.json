@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-13T11:59:01.390Z",
+    "end": "2020-05-13T11:59:49.243Z",
+    "duration": 47853,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "544a9cba-84d1-48a6-baad-ce4cd5b12508",
+      "title": "",
+      "fullFile": "cypress\\integration\\TrackWithUs\\Edit User.spec.js",
+      "file": "cypress\\integration\\TrackWithUs\\Edit User.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0e557a65-9fd2-49f1-ac05-63f41f74c24d",
+          "title": "Testing of TRACKWITHUS WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and View a module",
+              "fullTitle": "Testing of TRACKWITHUS WEB Login and View a module",
+              "timedOut": null,
+              "duration": 45721,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type(\"faraday@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('img');\ncy.wait(2000);\ncy.contains('TrackWithUs');\ncy.contains('Dashboard');\ncy.contains('Admin');\ncy.get('#userAdmin > .subnav-item').click({\n  force: true\n});\ncy.wait(1000);\ncy.contains('Manage Users');\ncy.get('#sidenavManageUser > .sidenav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Full Name');\ncy.get(':nth-child(1) > :nth-child(7) > #editUser').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('#MiddleName').clear().type('Gof');\ncy.wait(1000); // cy.get('#MiddleName').type('Parrot')\ncy.wait(2000);\ncy.get('#submitForm').click({\n  force: true\n});\ncy.contains('Submit');\ncy.wait(5000);\ncy.contains('Add User');",
+              "err": {},
+              "uuid": "15a08a9f-2c5c-4d43-972c-18eee5c4e77c",
+              "parentUUID": "0e557a65-9fd2-49f1-ac05-63f41f74c24d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "15a08a9f-2c5c-4d43-972c-18eee5c4e77c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 45721,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
