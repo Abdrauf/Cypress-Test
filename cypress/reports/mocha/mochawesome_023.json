@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-05-13T11:18:47.057Z",
+    "end": "2020-05-13T11:19:35.942Z",
+    "duration": 48885,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2fe2221b-010b-42a3-ad9d-f0062f0ec70d",
+      "title": "",
+      "fullFile": "cypress\\integration\\Twu\\twulogout.spec copy.js",
+      "file": "cypress\\integration\\Twu\\twulogout.spec copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6bf16090-4bfb-40c8-be13-abbb0e4db8fa",
+          "title": "Testing of SSR WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Log Out of the  Application",
+              "fullTitle": "Testing of SSR WEB Log Out of the  Application",
+              "timedOut": null,
+              "duration": 43199,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type(\"tom@qa.team\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.get(':nth-child(4) > .text-danger').click({\n  force: true\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `:nth-child(4) > .text-danger`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `:nth-child(4) > .text-danger`, but never found it.\n    at ensureExistence (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:137673:32)\n    at Object.ensureElExistence (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:137691:12)\n    at ensureExistence (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:3651:14)",
+                "diff": null
+              },
+              "uuid": "7ae52913-d28f-4e2a-b6de-c5e1d489edd0",
+              "parentUUID": "6bf16090-4bfb-40c8-be13-abbb0e4db8fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7ae52913-d28f-4e2a-b6de-c5e1d489edd0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 43199,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

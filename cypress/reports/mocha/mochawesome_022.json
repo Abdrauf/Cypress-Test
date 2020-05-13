@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-05-13T11:17:12.392Z",
+    "end": "2020-05-13T11:18:23.863Z",
+    "duration": 71471,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cfb9011f-addd-400c-af34-7c2f5f460d71",
+      "title": "",
+      "fullFile": "cypress\\integration\\Twu\\twulogin.spec.js",
+      "file": "cypress\\integration\\Twu\\twulogin.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4a5cb173-7dca-4851-b3d1-50689e1d4feb",
+          "title": "Testing of TRACK WITH US WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Application",
+              "fullTitle": "Testing of TRACK WITH US WEB Login Application",
+              "timedOut": null,
+              "duration": 65657,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type(\"blip@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.get('body');\ncy.get('.logo-img');\ncy.get(\"//a[contains(@class,'subnav-item')][contains(text(),'Field Reports')]\").click();\ncy.get(\"//h4[@class='panel-title']\");",
+              "err": {
+                "message": "SecurityError: Blocked a frame with origin \"http://trackwithus.test.vggdev.com\" from accessing a cross-origin frame.",
+                "estack": "SecurityError: Blocked a frame with origin \"http://trackwithus.test.vggdev.com\" from accessing a cross-origin frame.\nError: Blocked a frame with origin \"http://trackwithus.test.vggdev.com\" from accessing a cross-origin frame.\n    at Pace.start (http://trackwithus.test.vggdev.com/Content/plugins/pace-master/pace.js:916:14)",
+                "diff": null
+              },
+              "uuid": "bc9aeef5-2f65-4a93-964d-f76be1b8aa8f",
+              "parentUUID": "4a5cb173-7dca-4851-b3d1-50689e1d4feb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bc9aeef5-2f65-4a93-964d-f76be1b8aa8f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 65657,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,10 +1,10 @@
 {
   "video": true,
 
-  "testFiles": "**/*.feature",
+  
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
-    "configFile": "reporterOptions.json"
+    "configFile": "reporteroption.json"
   },
   "projectId": "6o6e4r"
 }
