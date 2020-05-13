@@ -15,7 +15,8 @@
 
 
 
-
+require('cypress-dark/src/halloween')
+require('cypress-xpath')
 // Import commands.js using ES2015 syntax:
 import './commands'
 
@@ -23,7 +24,3 @@ import './commands'
 // require('./commands')
 
 
-// To handle exception
-Cypress.on('uncaught:exception', (err, runnable) =>{
-    return false;
-})
