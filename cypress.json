@@ -1,7 +1,7 @@
 {
-
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "configFile": "reporterOptions.json"
-    }   
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporterOptions.json"
+  },
+  "projectId": "6o6e4r"
 }
