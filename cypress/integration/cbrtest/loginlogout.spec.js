@@ -5,9 +5,7 @@ describe("Testing CBR Web", ()=>{
     it("Login Application", ()=>{
 
         cy.visit("https://cbr.test.vggdev.com");
-
-
-       
+    
         cy.get('#exampleInputEmail').type("marky@mailinator.com");
         cy.get('#exampleInputPassword').type("P@ssword21");
 
@@ -16,11 +14,21 @@ describe("Testing CBR Web", ()=>{
         cy.wait(9000)
         
         cy.url().should("include","/home/dashboard");
-        cy.wait(3000)
+        cy.wait(8000)
         cy.contains('Dashboard')
         cy.contains('National Beneficiaries')
         cy.get('.navbar-collapse > .navbar-nav > .nav-item > .nav-link')
         cy.contains('Marky Tacky')
+
+    //Click View Organisation
+
+
+    
+
+
+
+
+
 
 
         cy.wait(5000)
