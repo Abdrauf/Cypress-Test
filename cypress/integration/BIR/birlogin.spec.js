@@ -22,6 +22,16 @@ describe("Testing of BIR WEB", ()=>{
 
         cy.wait(2000)
         cy.contains('Welcome, Troy')
+
+        // User LogOut
+        cy.wait(2000)
+        cy.get('#user').click()
+        cy.contains('Log Out')
+        cy.get('.dropdown-menu > :nth-child(4) > .text-danger').click()
+        cy.wait(3000)
+        //Log Out Confirmation
+        cy.contains('Forgot your password')
+
     })
     
 })    
