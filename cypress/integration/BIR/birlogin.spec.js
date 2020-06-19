@@ -14,7 +14,7 @@ describe("Testing of BIR WEB", ()=>{
 
         cy.get('#loginForm > div:nth-child(4) > button').click({force:true}); 
 
-        cy.wait(7000)
+        cy.wait(9000)
 
         cy.get('img')
         cy.contains('Business Intelligence & Reporting Tool')
