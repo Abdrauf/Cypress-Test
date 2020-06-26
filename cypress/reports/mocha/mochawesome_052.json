@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-06-26T19:56:39.823Z",
+    "end": "2020-06-26T19:58:55.270Z",
+    "duration": 135447,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fb23f3f8-b95a-4817-9e77-ba2255314239",
+      "title": "",
+      "fullFile": "cypress\\integration\\BIR\\View And Edit User.spec.js",
+      "file": "cypress\\integration\\BIR\\View And Edit User.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "12777948-ae9d-4e50-8325-47e4a95d67be",
+          "title": "Testing of BIR WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Application",
+              "fullTitle": "Testing of BIR WEB Login Application",
+              "timedOut": null,
+              "duration": 126585,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://nsioreporting2.test.vggdev.com/\");\ncy.url().should(\"include\", \"/Account/Login\");\ncy.get('#Email').type(\"troy@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get('#loginForm > div:nth-child(4) > button').click({\n  force: true\n});\ncy.wait(7000);\ncy.get('img');\ncy.contains('Business Intelligence & Reporting Tool');\ncy.contains('Dashboard');\ncy.wait(2000);\ncy.contains('Welcome, Troy'); //View Admin\ncy.contains('Admin');\ncy.wait(5000);\ncy.get('.subnav-list > :nth-child(3) > .subnav-item').click({\n  force: true\n});\ncy.wait(3000);\ncy.contains('User Management');\ncy.contains('Manage User');\ncy.get(':nth-child(1) > .sidenav-item').click({\n  force: true\n});\ncy.get(2000);\ncy.get(':nth-child(1) > :nth-child(6) > #editUser').click({\n  force: true\n});\ncy.contains('Edit User');\ncy.wait(500);\ncy.get('#FirstName').clear().type('Oshodi');\ncy.wait(1000);\ncy.contains('Submit');\ncy.get('#submitForm').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Existing Users');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `:nth-child(1) > :nth-child(6) > #editUser`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `:nth-child(1) > :nth-child(6) > #editUser`, but never found it.\n    at Context.eval (eval at <anonymous> (https://nsioreporting2.test.vggdev.com/__cypress/runner/cypress_runner.js:161417:16), <anonymous>:33:8)",
+                "diff": null
+              },
+              "uuid": "3c3b6747-6ded-4827-ac87-d4f5da76da7e",
+              "parentUUID": "12777948-ae9d-4e50-8325-47e4a95d67be",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3c3b6747-6ded-4827-ac87-d4f5da76da7e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 126585,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

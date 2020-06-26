@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-26T20:30:44.533Z",
+    "end": "2020-06-26T20:32:17.690Z",
+    "duration": 93157,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2727bd9b-c156-4435-9b9d-ddaf56dbd184",
+      "title": "",
+      "fullFile": "cypress\\integration\\TrackWithUs\\searchpeopleperformance.spec.js",
+      "file": "cypress\\integration\\TrackWithUs\\searchpeopleperformance.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cb3325a7-2e72-433b-badd-cae2e9ab7e17",
+          "title": "Testing of TRACKWITHUS WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and View a module",
+              "fullTitle": "Testing of TRACKWITHUS WEB Login and View a module",
+              "timedOut": null,
+              "duration": 84482,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type(\"faraday@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('img');\ncy.wait(2000);\ncy.contains('TrackWithUs');\ncy.contains('Dashboard');\ncy.contains('People Performance');\ncy.get('#peoplePerformance > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Performance Analysis');\ncy.get('.app-search > .form-control').type(\"NSIP-MONITOR-1603\");\ncy.contains('Showing 1 to 1 of 1 entries');\ncy.get(':nth-child(1) > .subnav-item').click();",
+              "err": {},
+              "uuid": "988100d4-b229-4f73-8737-3390e3eb94f1",
+              "parentUUID": "cb3325a7-2e72-433b-badd-cae2e9ab7e17",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "988100d4-b229-4f73-8737-3390e3eb94f1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 84482,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

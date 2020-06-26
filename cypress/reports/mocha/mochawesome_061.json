@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-06-26T20:23:03.126Z",
+    "end": "2020-06-26T20:24:51.278Z",
+    "duration": 108152,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91f8be0c-c6ef-4805-9898-b77aa72340dd",
+      "title": "",
+      "fullFile": "cypress\\integration\\TrackWithUs\\Edit User.spec.js",
+      "file": "cypress\\integration\\TrackWithUs\\Edit User.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f703c926-7570-4b04-b5d2-d5a93c329e07",
+          "title": "Testing of TRACKWITHUS WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and View a module",
+              "fullTitle": "Testing of TRACKWITHUS WEB Login and View a module",
+              "timedOut": null,
+              "duration": 100084,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type(\"faraday@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('img');\ncy.wait(2000);\ncy.contains('TrackWithUs');\ncy.contains('Dashboard');\ncy.contains('Admin');\ncy.get('#userAdmin > .subnav-item').click({\n  force: true\n});\ncy.wait(1000);\ncy.contains('Manage Users');\ncy.get('#sidenavManageUser > .sidenav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Full Name');\ncy.get(':nth-child(1) > :nth-child(7) > #editUser').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('#MiddleName').clear().type('Gof');\ncy.wait(1000); // cy.get('#MiddleName').type('Parrot')\ncy.wait(2000);\ncy.get('#submitForm').click({\n  force: true\n});\ncy.contains('Submit');\ncy.wait(5000);\ncy.contains('Add User');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `:nth-child(1) > :nth-child(7) > #editUser`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `:nth-child(1) > :nth-child(7) > #editUser`, but never found it.\n    at Context.eval (eval at <anonymous> (http://trackwithus.test.vggdev.com/__cypress/runner/cypress_runner.js:161417:16), <anonymous>:30:8)",
+                "diff": null
+              },
+              "uuid": "2e6ce960-89f9-4099-8d6c-c386fbd610e2",
+              "parentUUID": "f703c926-7570-4b04-b5d2-d5a93c329e07",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2e6ce960-89f9-4099-8d6c-c386fbd610e2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 100084,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

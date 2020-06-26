@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-26T20:25:11.442Z",
+    "end": "2020-06-26T20:26:33.447Z",
+    "duration": 82005,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fc68615d-b296-4be3-b9f0-7ac1100534a7",
+      "title": "",
+      "fullFile": "cypress\\integration\\TrackWithUs\\filterreportcomparison.spec.js",
+      "file": "cypress\\integration\\TrackWithUs\\filterreportcomparison.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c9212e4c-2bf7-4059-9fe8-9bb3fa22afc7",
+          "title": "Testing of TRACKWITHUS WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and View a module",
+              "fullTitle": "Testing of TRACKWITHUS WEB Login and View a module",
+              "timedOut": null,
+              "duration": 74367,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type(\"faraday@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('img');\ncy.wait(2000);\ncy.contains('TrackWithUs');\ncy.contains('Dashboard');\ncy.contains('Report Comparison');\ncy.get('#reportComparison > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Report Comparison Data');\ncy.get('#filterGrid').click();\ncy.get('#program').select('National Home Grown School Feeding Programme').should('have.value', '4');\ncy.get('#selected_month').select('March').should('have.value', '3');\ncy.get('#selected_year').select('2020');\ncy.get('#filterForm').click();\ncy.wait(6000);\ncy.contains('Report Comparison Data');\ncy.contains('Showing 1 to 1 of 1 entries');\ncy.get(':nth-child(1) > .subnav-item').click();",
+              "err": {},
+              "uuid": "afa12460-5a9c-4efb-87a8-788331cff05e",
+              "parentUUID": "c9212e4c-2bf7-4059-9fe8-9bb3fa22afc7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "afa12460-5a9c-4efb-87a8-788331cff05e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 74367,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

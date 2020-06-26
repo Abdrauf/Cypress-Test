@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-26T20:19:07.616Z",
+    "end": "2020-06-26T20:20:58.177Z",
+    "duration": 110561,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8291f522-d5a3-4856-8da9-c1d6e9c0c6ed",
+      "title": "",
+      "fullFile": "cypress\\integration\\TrackWithUs\\createuser.spec.js",
+      "file": "cypress\\integration\\TrackWithUs\\createuser.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "51921556-331a-4c4d-b228-f3b0fc899206",
+          "title": "Testing of TRACKWITHUS WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Click Admin and create User",
+              "fullTitle": "Testing of TRACKWITHUS WEB Click Admin and create User",
+              "timedOut": null,
+              "duration": 98704,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type('blip@mailinator.com');\ncy.get('#Password').type('P@ssword21');\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.wait(9000);\ncy.contains('Admin');\ncy.get('#userAdmin > .subnav-item').click({\n  force: true\n});\ncy.contains('Manage Users');\ncy.get(':nth-child(2) > .sidenav-item').click({\n  force: true\n});\ncy.wait(800);\ncy.contains('Add User');\ncy.get('#createUser').click({\n  force: true\n});\ncy.wait(800);\ncy.get('#FirstName').type('QAT');\ncy.wait(50);\ncy.get('#LastName').type('Train');\ncy.get('#Email').type('cypt31@qa.com');\ncy.get('#Password').type('P@ssword1');\ncy.get('#ConfirmPassword').type('P@ssword1');\ncy.get('#Mobile').type('08022741823');\ncy.wait(5000);\ncy.get('#selectedUserRoleName').select(\"GSV ME\").should('have.value', '59');\ncy.wait(5000);\ncy.contains('Check All');\ncy.get('#checkAll').click({\n  force: true\n});\ncy.wait(500);\ncy.get('#SelectedState').select('Adamawa State').should('have.value', '3');\ncy.contains('Required Submissions Frequency');\ncy.get('#required_submissions_frequency').select('Monthly').should('have.value', '3');\ncy.get('#submitForm').click({\n  force: true\n});\ncy.contains('Existing Users');",
+              "err": {},
+              "uuid": "ff2813ba-f306-4252-a592-6ac46cd8f2b3",
+              "parentUUID": "51921556-331a-4c4d-b228-f3b0fc899206",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ff2813ba-f306-4252-a592-6ac46cd8f2b3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 98704,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

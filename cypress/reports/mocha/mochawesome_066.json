@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-26T20:32:38.031Z",
+    "end": "2020-06-26T20:34:07.527Z",
+    "duration": 89496,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ddc66456-433c-4511-80ad-05368d3644d9",
+      "title": "",
+      "fullFile": "cypress\\integration\\TrackWithUs\\socialprogramadmin.spec.js",
+      "file": "cypress\\integration\\TrackWithUs\\socialprogramadmin.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6269330-eaeb-4f5b-bbdb-4e23d7ecabc9",
+          "title": "Testing of TRACKWITHUS WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and View a module",
+              "fullTitle": "Testing of TRACKWITHUS WEB Login and View a module",
+              "timedOut": null,
+              "duration": 81231,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type(\"faraday@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('img');\ncy.wait(2000);\ncy.contains('TrackWithUs');\ncy.contains('Dashboard');\ncy.contains('Social Programs Admin');\ncy.get('#socialProgramsAdmin > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Manage Social Programmes');\ncy.contains('Manage Business Indicators');\ncy.contains('Add Social Programme');\ncy.get('#createProgramme').click({\n  force: true\n});\ncy.contains('Add Programme & Cluster Form');\ncy.wait(2000);\ncy.get('.programme-form-modal > .modal-dialog > .modal-content > .modal-footer > .btn-custom-red').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Add Social Programme');\ncy.wait(5000);\ncy.get('.app-search > .form-control').type('Test VGG').click();",
+              "err": {},
+              "uuid": "c0ae5a68-e617-44db-b86a-7f01f07fcaf9",
+              "parentUUID": "d6269330-eaeb-4f5b-bbdb-4e23d7ecabc9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c0ae5a68-e617-44db-b86a-7f01f07fcaf9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 81231,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

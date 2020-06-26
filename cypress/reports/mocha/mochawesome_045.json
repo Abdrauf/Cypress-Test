@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-06-25T16:04:43.298Z",
+    "end": "2020-06-25T16:06:05.665Z",
+    "duration": 82367,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5d942f86-c073-4db0-84b6-d13cdc04aad3",
+      "title": "",
+      "fullFile": "cypress\\integration\\Random\\Amazon.spec.js",
+      "file": "cypress\\integration\\Random\\Amazon.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "05dcb43e-65b0-46a6-a1c5-f039a644df0f",
+          "title": "Testing Free Website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search a website on Google",
+              "fullTitle": "Testing Free Website Search a website on Google",
+              "timedOut": null,
+              "duration": 70383,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.amazon.com/\");\ncy.contains('amazon');\ncy.get('#nav-link-accountList > .nav-line-2').click();\ncy.contains('Account & Lists');\ncy.wait(1000); //Register A new User\ncy.get('.nav-signin-tooltip-footer > .nav-a').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Account & Lists' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Account & Lists' but never did.\n    at Context.eval (https://www.amazon.com/__cypress/tests?p=cypress\\integration\\Random\\Amazon.spec.js:10:8)",
+                "diff": null
+              },
+              "uuid": "56679998-7daa-42ac-a7c9-f81b66f1f203",
+              "parentUUID": "05dcb43e-65b0-46a6-a1c5-f039a644df0f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "56679998-7daa-42ac-a7c9-f81b66f1f203"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 70383,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

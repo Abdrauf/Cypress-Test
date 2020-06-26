@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-06-25T16:06:31.764Z",
+    "end": "2020-06-25T16:08:05.314Z",
+    "duration": 93550,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "bcc57f4d-e70e-417c-9c85-be212f0fd48c",
+      "title": "",
+      "fullFile": "cypress\\integration\\Random\\elsie.spec.js",
+      "file": "cypress\\integration\\Random\\elsie.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34382816-d91e-4e66-82bd-ab2bf0cd6da3",
+          "title": "Total BI Test web",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a new User",
+              "fullTitle": "Total BI Test web Create a new User",
+              "timedOut": null,
+              "duration": 4365,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.subnav-list > :nth-child(3) > .subnav-item').click({\n  multiple: true\n});\ncy.get('.navbar-header > div').click({\n  multiple: true\n});\ncy.get('.subnav-list > :nth-child(3) > .subnav-item').click({\n  multiple: true\n});\ncy.get(':nth-child(1) > .sidenav-item').click({\n  force: true\n});\ncy.wait(800);\ncy.get('#createUser').click({\n  force: true\n});\ncy, wait(4000);\ncy.get('#userMgtModal').cick();\ncy.get('#FirstName').type('oky');\ncy.get('#LastName').type('Training');\ncy.get('#Email').type('okay@mailinator.com');\ncy.get('#Password').type('password1');\ncy.get('#ConfirmPassword').type('password1');\ncy.get('#Mobile').type('08062741123');\ncy.wait(5000);\ncy.get(\"#SelectedUserRoleName\").select(\"Disco Operative\").should('have.value', '114');\ncy.wait(5000);\ncy.contains('Check All');\ncy.get('#checkAll').click({\n  force: true\n});\ncy.wait(5000);\ncy.get('#selectedAdminScope').select('National').should('have.value', '2');\ncy.get('#submitForm').click({\n  force: true\n});",
+              "err": {
+                "message": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.get()`\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Total BI Test web`",
+                "estack": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.get()`\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Total BI Test web`\n    at ensureElement (http://ekedc-bi-web.staging.vggdev.com/__cypress/runner/cypress_runner.js:148535:24)\n    at validateType (http://ekedc-bi-web.staging.vggdev.com/__cypress/runner/cypress_runner.js:148359:16)\n    at Object.ensureSubjectByType (http://ekedc-bi-web.staging.vggdev.com/__cypress/runner/cypress_runner.js:148401:11)\n    at pushSubjectAndValidate (http://ekedc-bi-web.staging.vggdev.com/__cypress/runner/cypress_runner.js:155938:15)\n    at Context.<anonymous> (http://ekedc-bi-web.staging.vggdev.com/__cypress/runner/cypress_runner.js:156258:18)\nFrom Your Spec Code:\n    at Context.eval (http://ekedc-bi-web.staging.vggdev.com/__cypress/tests?p=cypress\\integration\\Random\\elsie.spec.js:74:38)",
+                "diff": null
+              },
+              "uuid": "13879384-8aae-44ee-94a2-f44a374f5836",
+              "parentUUID": "34382816-d91e-4e66-82bd-ab2bf0cd6da3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit User",
+              "fullTitle": "Total BI Test web Edit User",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Existing Users');\ncy.get(':nth-child(5) > :nth-child(1) > .panel > .panel-body');\ncy.get(':nth-child(1) > :nth-child(6) > #editUser').click();\ncy.get('#FirstName').type('okychi');\ncy.get('#LastName').type('best');\ncy.get('#Email').type('okay@mailinator.com');\ncy.get('#Mobile').type('08092751420');\ncy.wait(5000);\ncy.contains('Check All');\ncy.get('#checkAll').click({\n  force: true\n});\ncy.wait(5000);",
+              "err": {},
+              "uuid": "b6aa2d45-b25e-4f80-a1c7-cc0d06ca57af",
+              "parentUUID": "34382816-d91e-4e66-82bd-ab2bf0cd6da3",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "13879384-8aae-44ee-94a2-f44a374f5836"
+          ],
+          "pending": [],
+          "skipped": [
+            "b6aa2d45-b25e-4f80-a1c7-cc0d06ca57af"
+          ],
+          "duration": 4365,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

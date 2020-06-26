@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-26T20:49:00.296Z",
+    "end": "2020-06-26T20:50:25.954Z",
+    "duration": 85658,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ff21501f-1eb7-4860-92b2-fb405761e55f",
+      "title": "",
+      "fullFile": "cypress\\integration\\TrackWithUs\\viewreporttemplate.spec.js",
+      "file": "cypress\\integration\\TrackWithUs\\viewreporttemplate.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2a8af406-aa83-43f1-91fa-4fdcc6fb9cdb",
+          "title": "Testing of TRACKWITHUS WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and View a module",
+              "fullTitle": "Testing of TRACKWITHUS WEB Login and View a module",
+              "timedOut": null,
+              "duration": 79402,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://trackwithus.test.vggdev.com/\");\ncy.url().should(\"include\", \"/account/login\");\ncy.get('#Email').type(\"faraday@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get(':nth-child(4) > button').click({\n  force: true\n});\ncy.wait(2000);\ncy.get('img');\ncy.wait(2000);\ncy.contains('TrackWithUs');\ncy.contains('Dashboard');\ncy.contains('Field Report Template');\ncy.get('#fieldReportTemplates > .subnav-item').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Existing Report Templates');\ncy.get('#cloneAuthoredForm22').click({\n  force: true\n});\ncy.wait(5000);\ncy.contains('Field Report Template');\ncy.wait(5000);\ncy.contains('Save');\ncy.get('#saveFieldReport').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Existing Report Templates');",
+              "err": {},
+              "uuid": "06a9eacb-962f-4c95-9ec5-3ab5699bdd01",
+              "parentUUID": "2a8af406-aa83-43f1-91fa-4fdcc6fb9cdb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "06a9eacb-962f-4c95-9ec5-3ab5699bdd01"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 79402,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

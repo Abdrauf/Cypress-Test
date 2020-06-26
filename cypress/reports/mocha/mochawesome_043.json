@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-06-25T16:01:51.384Z",
+    "end": "2020-06-25T16:02:47.804Z",
+    "duration": 56420,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "35f2d929-0a9f-4cc7-a61f-f399465dd882",
+      "title": "",
+      "fullFile": "cypress\\integration\\BIR\\view programme.spec.js",
+      "file": "cypress\\integration\\BIR\\view programme.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4e770ade-f4f6-4cdf-8455-11ab09e05444",
+          "title": "Testing of BIR WEB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Application",
+              "fullTitle": "Testing of BIR WEB Login Application",
+              "timedOut": null,
+              "duration": 49342,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://nsioreporting2.test.vggdev.com/\");\ncy.url().should(\"include\", \"/Account/Login\");\ncy.get('#Email').type(\"troy@mailinator.com\");\ncy.get('#Password').type(\"P@ssword1\");\ncy.get('#loginForm > div:nth-child(4) > button').click({\n  force: true\n});\ncy.wait(7000);\ncy.get('img');\ncy.contains('Business Intelligence & Reporting Tool');\ncy.contains('Dashboard');\ncy.wait(2000);\ncy.contains('Welcome, Troy'); // Click And View  Programme\ncy.contains('Manage Metrics');\ncy.wait(5000);\ncy.get('.subnav-list > :nth-child(2) > .subnav-item').click({\n  force: true\n});\ncy.wait(3000);\ncy.contains('Manage Social Programmes');\ncy.get(':nth-child(1) > :nth-child(5) > #editProgramme').click();\ncy.get(2000);\ncy.contains('Edit Programme');\ncy.get('#programmeName').clear().type('New Product');\ncy.wait(1000);\ncy.contains('Update');\ncy.get('#submitForm').click({\n  force: true\n});\ncy.wait(2000);\ncy.contains('Existing Programmes');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Dashboard' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Dashboard' but never did.\n    at Context.eval (eval at <anonymous> (https://nsioreporting2.test.vggdev.com/__cypress/runner/cypress_runner.js:161417:16), <anonymous>:17:8)",
+                "diff": null
+              },
+              "uuid": "9b01ed25-a7cd-4398-ac39-c17356f3f8f2",
+              "parentUUID": "4e770ade-f4f6-4cdf-8455-11ab09e05444",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9b01ed25-a7cd-4398-ac39-c17356f3f8f2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 49342,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
